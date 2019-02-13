@@ -1,3 +1,11 @@
+<!-- Markdown Docs: -->
+<!-- https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown -->
+<!-- https://daringfireball.net/projects/markdown/basics -->
+<!-- https://daringfireball.net/projects/markdown/syntax -->
+
+[![Build Status][travis-image]][travis-url]
+<!-- [![Test Coverage][coveralls-image]][coveralls-url] -->
+
 # sapper-template
 
 The default [Sapper](https://github.com/sveltejs/sapper) template, with branches for Rollup and webpack. To clone it and get started:
@@ -86,3 +94,8 @@ yarn add -D @sveltejs/svelte-virtual-list
 ## Bugs and feedback
 
 Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
+
+[travis-image]: https://travis-ci.org/NikolayMakhonin/sapper-template.svg?branch=template-app
+[travis-url]: https://travis-ci.org/NikolayMakhonin/sapper-template?branch=template-app
+[coveralls-image]: https://coveralls.io/repos/github/NikolayMakhonin/sapper-template/badge.svg?branch=template-app
+[coveralls-url]: https://coveralls.io/github/NikolayMakhonin/sapper-template?branch=template-app
