@@ -1,0 +1,11 @@
+capabilities:
+  browserName: "chrome"
+  chromeOptions:
+    args:
+      - disable-infobars
+      - headless
+      - user-data-dir=%TEMP%/Chromium/33.0.1750.170
+    binary: "l:/Program Files (x86)/Chromium/33.0.1750.170"
+baseUrl: "https://localhost:3000/"
+sdfsdfsf
+ sdf sdf s fds f

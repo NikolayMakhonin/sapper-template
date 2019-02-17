@@ -7,6 +7,50 @@
 
 	%sapper.base%
 
+	<!-- region Polyfills -->
+
+	<!--Needed for IE11:-->
+	<!--https://modernizr.com/download?setclasses-->
+	<!--<script src="modernizr-custom.js"></script>-->
+	<!--https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from#Polyfill-->
+	<!--<script src="array-from-polyfill.js"></script>-->
+	<script src="polyfill-custom.js"></script>
+	<!--https://github.com/lifaon74/url-polyfill-->
+	<script src="url-polyfill.min.js"></script>
+	<!--https://github.com/taylorhakes/promise-polyfill-->
+	<script src="promise-polyfill.min.js"></script>
+
+	<!--Needed for Android 4.4.4 KitKat WebView Chrome 33.0.0.0:-->
+	<!--https://github.com/github/fetch-->
+	<script src="fetch.iife.js"></script>
+
+	<!--Possibly needed for IE11:-->
+	<!--<script src="es5-shim.min.js"></script>-->
+	<!--<script src="es6-shim.min.js"></script>-->
+
+	<script>
+		var oldEval = window.eval;
+		delete window.eval;
+		window.eval = function (str) {
+			if (str.indexOf('async function') >= 0) {
+				return oldEval.call(window, str);
+			}
+
+			try {
+				return oldEval.call(window, str);
+			} catch (ex) {
+				console.error(ex);
+				console.log(str);
+				throw ex;
+			}
+		};
+		// window.addEventListener('unhandledrejection', function (e) {
+		// 	console.error('Unhandled rejection2: ', e);
+		// });
+	</script>
+
+	<!-- endregion Polyfills -->
+
 	<link rel='stylesheet' href='global.css'>
 	<link rel='manifest' href='manifest.json'>
 	<link rel='icon' type='image/png' href='favicon.png'>
@@ -19,8 +63,21 @@
 	<!-- This contains the contents of the <svelte:head> component, if
 	     the current page has one -->
 	%sapper.head%
+
+	<link rel='stylesheet' href='global.css'>
 </head>
-<body>
+<body class="theme-dark">
+	<script>
+		// addEventListener('click', function (e) {
+		// 	console.log('TEST3');
+		// 	e.preventDefault();
+		// 	return;
+		// });
+		//
+		// window.history.replaceState('page2', 'Title', '/page2.php');
+		// // parent.location.replace('about');
+		// console.log('url = ' + location.href + ';');
+	</script>
 	<!-- The application will be rendered inside this element,
 	     because `app/client.js` references it -->
 	<div id='sapper'>%sapper.html%</div>

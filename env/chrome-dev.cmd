@@ -1,0 +1,1 @@
+"E:\Program Files (x86)\Google\Chrome Dev\Application\chrome.exe" --disable-web-security --user-data-dir="%TEMP%/Chrome"

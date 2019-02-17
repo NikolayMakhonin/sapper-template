@@ -1,0 +1,6 @@
+{
+	"suites": "selenium/intern.js",
+	"environments": [
+		{ "browserName": "chrome" }
+	]
+}

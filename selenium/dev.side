@@ -1,0 +1,103 @@
+{
+  "id": "9e0d468d-b0f6-4dfb-beec-cd523fbd6e57",
+  "version": "2.0",
+  "name": "Test",
+  "url": "https://xmika.com",
+  "tests": [{
+    "id": "e7c068cf-e970-4c91-b59a-789f19ff1a33",
+    "name": "Simple Test",
+    "commands": [{
+      "id": "6160030b-f375-47b7-ad75-2f627982b9e2",
+      "comment": "",
+      "command": "open",
+      "target": "/balda/page/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2320335e-44be-4077-99d1-3fdca31b07c6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "608x694",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e3f13d6-3caa-4c11-ab11-84a72ac293d9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=about",
+      "targets": [
+        ["linkText=about", "linkText"],
+        ["css=.svelte-16xe5hm:nth-child(2) > .svelte-16xe5hm", "css:finder"],
+        ["xpath=//a[contains(text(),'about')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"console.log('onclick')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='sapper']/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'about')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'about')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63a98f9b-6458-4340-8240-dc151fdae968",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=blog",
+      "targets": [
+        ["linkText=blog", "linkText"],
+        ["css=.svelte-16xe5hm:nth-child(3) > .svelte-16xe5hm", "css:finder"],
+        ["xpath=//a[contains(text(),'blog')]", "xpath:link"],
+        ["xpath=//div[@id='sapper']/nav/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'blog')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'blog')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85648c8f-6673-43c5-9c06-26a9fa1814dd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=What is Sapper?",
+      "targets": [
+        ["linkText=What is Sapper?", "linkText"],
+        ["css=.svelte-1hdgus3 > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'What is Sapper?')]", "xpath:link"],
+        ["xpath=//div[@id='sapper']/main/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'blog/what-is-sapper')]", "xpath:href"],
+        ["xpath=//main/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'What is Sapper?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08a81395-4795-4ce0-90d4-056441b27aa3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=home",
+      "targets": [
+        ["linkText=home", "linkText"],
+        ["css=.svelte-16xe5hm > .svelte-16xe5hm > .svelte-16xe5hm:nth-child(1) > .svelte-16xe5hm", "css:finder"],
+        ["xpath=//a[contains(text(),'home')]", "xpath:link"],
+        ["xpath=//div[@id='sapper']/nav/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '.')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bccba473-1303-4d02-82a3-6ad2b681ff89",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d98e4877-49c5-4301-bb00-034ea1d9e59d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e7c068cf-e970-4c91-b59a-789f19ff1a33"]
+  }],
+  "urls": ["https://xmika.com/"],
+  "plugins": []
+}
